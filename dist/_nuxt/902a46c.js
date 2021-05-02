@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{362:function(t,n,e){"use strict";e.r(n);var o={name:"indphoto",prop:["link"]},c=e(15),component=Object(c.a)(o,(function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("div",{staticClass:"photos"},[e("img",{attrs:{src:t.link}})])}),[],!1,null,"fdc81be6",null);n.default=component.exports}}]);
