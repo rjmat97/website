@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <HeaderBar/>
     <div style="background: grey; min-height: 70vh; height: 100%">
       <Nuxt />
     </div>
