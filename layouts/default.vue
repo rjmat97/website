@@ -12,11 +12,11 @@
       center>
       <span>
         
-              <e-col :span="2">
+              <el-col :span="2">
                 <div @click="$store.dispatch('loadPrev')" style="width: 10vw">
                   <img class="controls left-but" :src="require('@/assets/arrow.svg')">
                 </div>
-              </e-col>
+              </el-col>
 
               <el-col :span="20">
                 <div style="width: 100%; display: block;">
@@ -50,10 +50,13 @@
         },
         imgProps(){
           if(this.dialogVisible){
-            let img = document.getElementById('image-holder')
-            return (img.clientWidth>img.clientWidth) ? "width:100%;" : "height:80vh;"
-          }else 
-          return ""
+            try{
+              let img = document.getElementById('image-holder')
+              return (img.clientWidth>img.clientWidth) ? "width:100%;" : "height:70vh;"
+            }catch{
+              return "width:90%;"
+            }
+          }else return ""
         }
     },
   }
@@ -105,10 +108,10 @@
   }
   .controls{
     width: 4em;
-    /* display: block; */
-    /* padding-left: auto; */
-    /* margin-left: auto;
-    margin-right: auto; */
+    display: block;
+    padding-left: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .left-but{
     transform: rotate(90deg);
