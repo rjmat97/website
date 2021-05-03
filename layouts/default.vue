@@ -1,12 +1,23 @@
 <template>
-  <div id="app">
+  <div id="app" :style="styles">
     <HeaderBar/>
-    <div style="background: grey; min-height: 70vh; height: 100%">
+    <div style="min-height: 70vh; height: 100%">
       <Nuxt />
     </div>
     <Footnote/>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'layout',
+    computed:{
+        styles() {return `background: ${this.$store.state.background};`+
+                              ` color:     ${this.$store.state.color}`
+        }
+    }
+  }
+</script>
 
 <style>
 html {

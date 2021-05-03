@@ -2168,6 +2168,11 @@ bluebird@^3.1.1, bluebird@^3.5.5:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
+blueimp-gallery@^2.33.0:
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/blueimp-gallery/-/blueimp-gallery-2.44.0.tgz#607908feb69897eef06e56f0d00d68e921498d45"
+  integrity sha512-msLsEV/7hpOokS/MimNbbrIv1lFnNe/45HeLJUvHUfuJklbPRiodXYSBs0Ibwe05un5bFRryQmmzhUZBiFaZmg==
+
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   version "4.12.0"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
@@ -2182,6 +2187,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
+bootstrap@^4.3.1:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.6.0.tgz#97b9f29ac98f98dfa43bf7468262d84392552fd7"
+  integrity sha512-Io55IuQY3kydzHtbGvQya3H+KorS/M9rSNyfCGCg9WZ4pyT/lCxIlpJgG1GXW/PswzC84Tr2fBYi+7+jFVQQBw==
 
 boxen@^5.0.0:
   version "5.0.0"
@@ -5158,6 +5168,11 @@ jiti@^1.3.0, jiti@^1.6.3:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.6.4.tgz#63453b602d0234f8bd7ce638f03f0e74ef99be12"
   integrity sha512-ICUtP0/rAyT/GaaDG0vj6fmWzx5yjFc7v+L1MAEARGl1+lrdJ8wtJNChr+ZGEdPoOhFwdhtcDO5VM2TNNgPpjQ==
 
+jquery@^3.3.1:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -6523,6 +6538,11 @@ pnp-webpack-plugin@^1.6.4:
   integrity sha512-7Wjy+9E3WwLOEL30D+m8TSTF7qJJUJLONBnwQp0518siuMxUQUbgZwssaFX+QKlZkjHZcw/IpZCt/H0srrntSg==
   dependencies:
     ts-pnp "^1.1.6"
+
+popper.js@^1.14.7:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
 
 portfinder@^1.0.26:
   version "1.0.28"
@@ -9067,6 +9087,16 @@ vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
+
+vue-cover-gallery@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/vue-cover-gallery/-/vue-cover-gallery-1.0.7.tgz#64c8bda86a410a461f993b5827d0f015c377738f"
+  integrity sha512-4k95cTKLdaCCqEAcwuAzJGg9/NJ8rTpO7u9eyvby+7SnlpsKJxMq4F8O9kVFRG0ActLJEDvQNQgOYTuiXhWCYA==
+  dependencies:
+    blueimp-gallery "^2.33.0"
+    bootstrap "^4.3.1"
+    jquery "^3.3.1"
+    popper.js "^1.14.7"
 
 vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.6.0:
   version "7.6.0"

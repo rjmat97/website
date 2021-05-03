@@ -15,7 +15,7 @@
     "core-js": "^3.9.1",
     "element-ui": "^2.15.1",
     "nuxt": "^2.15.3",
-    "push-dir": "^0.4.1"
+    "vue-cover-gallery": "^1.0.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
@@ -25,6 +25,7 @@
     "eslint": "^7.22.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.7.0",
-    "postcss": "^8.2.8"
+    "postcss": "^8.2.8",
+    "push-dir": "^0.4.1"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="footer" :style="styles">
         <SocialHandles/>
         page create by ©ReubenJacobMathew
     </div>
@@ -7,7 +7,8 @@
     
 <script>
     export default {
-        name: 'footnote'
+        name: 'footnote',
+        props: ['styles']
     }
 </script>
 
@@ -17,6 +18,6 @@
         background: #333;
         height: 20vh;
         padding: 2em;
-        text: white;
+        color: white;
     }
 </style>

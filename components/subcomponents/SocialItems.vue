@@ -1,13 +1,25 @@
 <template>
     <a :href="'http://'+link" target="_blank">
-        <img :src="require('@/assets/icons/'+ logo + '')">
+        <img :src="require('@/assets/icons/'+ logo + '')" 
+            :style="`width: `+ size">
     </a>
 </template>
 
 <script>
     export default {
         name: 'social_handles',
-        props:['logo', 'link'],
+        props:{
+            logo:{
+                type: String
+            }, 
+            link:{
+                type: String
+            }, 
+            size: {
+                type: String,
+                default: "30px"
+            }
+        },
     }
 </script>
 
@@ -16,7 +28,6 @@
         padding: 2px;
     }
     img{
-        width: 30px;
         filter: invert(100%);
     }
 </style>

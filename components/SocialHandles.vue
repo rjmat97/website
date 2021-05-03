@@ -1,13 +1,14 @@
 <template>
     <div class="socials"> 
-        <el-col :span="16" :offset="8">
+        <!-- <el-col :span="16" :offset="8"> -->
             <Social-Items v-for="icon in icons"
                 :key="icon.link"
                 :logo="icon.logo"
                 :link="icon.link"
+                :size="size"
             >
             </Social-Items>
-        </el-col>
+        <!-- </el-col> -->
     </div>
 </template>
 
@@ -17,6 +18,7 @@
         components:{
             SocialItems: () => import('./subcomponents/SocialItems.vue')
         },
+        props:['size'],
         data(){
             return{
                 icons:[
