@@ -12,7 +12,7 @@
                 </div>
                 <div class="deets">
                     <h1 class="font">rjmat97</h1>
-                    <SocialHandles :size="`20px`"/>
+                    <SocialHandles :size="`30px`"/>
                 </div>
             </div>
         </el-col>
@@ -41,7 +41,7 @@
         padding: 10px 0px;
     }
     .profile{
-        width: 10vw;
+        width: 15vw;
         border-radius: 50%;
     }
     .deets{

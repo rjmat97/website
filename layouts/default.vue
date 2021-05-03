@@ -10,12 +10,26 @@
       :visible.sync="dialogVisible" :fullscreen="true" :style="`background: blue`"
       width="100%" @visible-change="dialogVisible(false)"
       center>
-      <span style="display: flex">
-        <!-- <el-col :span="22" :offset="1" :lg="{span: 18, offset: 3}"> -->
-          <div @click="$store.dispatch('loadPrev')">previous</div>
-          <img class="full-image" :src="$store.state.imageNow">
-          <div @click="$store.dispatch('loadNext')">next</div>
-        <!-- </el-col> -->
+      <span>
+        
+              <e-col :span="2">
+                <div @click="$store.dispatch('loadPrev')" style="width: 10vw">
+                  <img class="controls left-but" :src="require('@/assets/arrow.svg')">
+                </div>
+              </e-col>
+
+              <el-col :span="20">
+                <div style="width: 100%; display: block;">
+                  <img class="full-image" id="image-holder" 
+                    :src="$store.state.imageNow" :style="imgProps">
+                </div> 
+              </el-col>
+
+              <el-col :span="2">
+                <div @click="$store.dispatch('loadNext')" style="width: 10vw">
+                  <img class="controls right-but" :src="require('@/assets/arrow.svg')">
+                </div>
+              </el-col>
       </span>
     </el-dialog>
 
@@ -33,6 +47,13 @@
         dialogVisible:{
           get()    {return this.$store.state.dialogVisible},
           set(data) {this.$store.dispatch('dialogVisible', data)}
+        },
+        imgProps(){
+          if(this.dialogVisible){
+            let img = document.getElementById('image-holder')
+            return (img.clientWidth>img.clientWidth) ? "width:100%;" : "height:80vh;"
+          }else 
+          return ""
         }
     },
   }
@@ -65,17 +86,34 @@
   }
   .full-image{
     display: block;
-    align-items: center;
-    margin-bottom: auto;
-    margin-top: auto;
-    max-height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 100%; */
   }
-  /* span{
-    height: 100%;
-    width: 100%;
-    color: white;
-  } */
+  span{
+    display: flex; 
+    align-items: center;
+    position: absolute;
+    top:6;
+    bottom: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
   .el-dialog.el-dialog--center{
     background: rgb(27, 27, 27);
+  }
+  .controls{
+    width: 4em;
+    /* display: block; */
+    /* padding-left: auto; */
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+  .left-but{
+    transform: rotate(90deg);
+  }
+  .right-but{
+    transform: rotate(-90deg);
   }
 </style>
