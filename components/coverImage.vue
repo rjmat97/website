@@ -7,8 +7,13 @@
             :lg="{span: 20, offset: 2}"
             :xl="{span: 18, offset: 3}">
             <div class="details">
-                <h1 class="font">rjmat97</h1>
-                <SocialHandles :size="`20px`"/>
+                <div class="pic">
+                    <img class="profile" :src="require('@/assets/profile.jpg')">
+                </div>
+                <div class="deets">
+                    <h1 class="font">rjmat97</h1>
+                    <SocialHandles :size="`20px`"/>
+                </div>
             </div>
         </el-col>
         <img class="cover-image" :src="require('@/assets/cover_image.png')">
@@ -27,10 +32,19 @@
     }
     .details{
         position: absolute;
-        top: 7rem;
+        top: 25vw;
         margin-left: 3em;
+        display: flex;
+        align-items: center;
     }
     .socials{
         padding: 10px 0px;
+    }
+    .profile{
+        width: 10vw;
+        border-radius: 50%;
+    }
+    .deets{
+        margin-left: 3vh
     }
 </style>
