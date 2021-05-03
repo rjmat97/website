@@ -2,6 +2,7 @@
     <div class="photo-frame">
         <!-- <el-col :span="20" :offset="3"> -->
             <div class="bar">
+                <el-button @click="$store.dispatch('dialogVisible', true)">show box</el-button>
                 <Indphoto class="left" v-for="i in left"
                     :key="i"
                     :link="i"
@@ -13,7 +14,6 @@
                     :link="i"
                 ></Indphoto>
              </div>
-        <!-- </el-col> -->
     </div>
 </template>
 

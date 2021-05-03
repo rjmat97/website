@@ -1,6 +1,6 @@
 <template>
         <!-- <el-col :span="6"> -->
-            <img :src="link">
+            <img :src="link" @click="setFull()">
         <!-- </el-col> -->
         <!-- <br v-if="state"> -->
 </template>
@@ -11,6 +11,12 @@
         props:['link', 'keys'],
         computed:{
             state() {return (this.keys%4 == 0) ? true : false}
+        },
+        methods:{
+            setFull(){
+                this.$store.dispatch('setImageNow', this.link)
+                this.$store.dispatch('dialogVisible', true)
+            }
         }
     }
 </script>
