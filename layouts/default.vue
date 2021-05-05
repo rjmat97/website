@@ -6,31 +6,45 @@
     </div>    
 
     <el-dialog
-      title="Images"
       :visible.sync="dialogVisible" :fullscreen="true" :style="`background: blue`"
       width="100%" @visible-change="dialogVisible(false)"
       center>
-      <span>
-        
+      {{$store.state.currentIndex}}<br>
+        <div class="main-holder">
+          <div class="top" @click="$store.dispatch('dialogVisible',false)">
+            <img :src="require('@/assets/exit.svg')" 
+             class="controls-img">
+          </div>
+          <span>
+            <!-- <el-row type="flex" align="middle"> -->
+              
               <el-col :span="2">
-                <div @click="$store.dispatch('loadPrev')" style="width: 10vw">
+                <div @click="$store.dispatch('loadPrev')" style="width: 10vw" v-if="leftActive">
+                  <img class="controls left-but" :src="require('@/assets/arrow.svg')">
+                </div>
+                <div style="width: 10vw; filter: invert(80%)" v-if="!leftActive">
                   <img class="controls left-but" :src="require('@/assets/arrow.svg')">
                 </div>
               </el-col>
-
+      
               <el-col :span="20">
                 <div style="width: 100%; display: block;">
                   <img class="full-image" id="image-holder" 
-                    :src="$store.state.imageNow" :style="imgProps">
+                    :src="imagenow" :style="imgProps">
                 </div> 
               </el-col>
-
+      
               <el-col :span="2">
-                <div @click="$store.dispatch('loadNext')" style="width: 10vw">
-                  <img class="controls right-but" :src="require('@/assets/arrow.svg')">
+                <div @click="$store.dispatch('loadNext')" style="width: 10vw" v-if="rightActive">
+                  <img disabled="true" class="controls right-but" :src="require('@/assets/arrow.svg')">
+                </div>
+                <div style="width: 10vw; filter: invert(80%)" v-if="!rightActive">
+                  <img disabled="true" class="controls right-but" :src="require('@/assets/arrow.svg')">
                 </div>
               </el-col>
-      </span>
+            <!-- </el-row> -->
+          </span>
+        </div>
     </el-dialog>
 
     <Footnote/>
@@ -41,6 +55,8 @@
   export default {
     name: 'layout',
     computed:{
+        rightActive() {return this.$store.state.rightArrState},
+        leftActive()  {return this.$store.state.leftArrState},
         styles() {return `background: ${this.$store.state.background};`+
                               ` color:     ${this.$store.state.color}`
         },
@@ -52,11 +68,17 @@
           if(this.dialogVisible){
             try{
               let img = document.getElementById('image-holder')
-              return (img.clientWidth>img.clientWidth) ? "width:100%;" : "height:70vh;"
+              return (img.clientWidth>img.clientWidth) ? "width: 70vh; height" : "height:50vw;"
             }catch{
               return "width:90%;"
             }
           }else return ""
+        },
+        imagenow(){
+          return this.$store.state.imageNow.replace(/\.(jpg|png)$/, '_o.$1') 
+        },
+        curlink(){
+          return this.$store.state.imageNow.replace(/https:\/\/live\.staticflickr\.com\/\d+(.*)\/\.(jpg|png)/, '\$2')
         }
     },
   }
@@ -93,21 +115,41 @@
     margin-right: auto;
     /* width: 100%; */
   }
-  span{
+  .main-holder{
+    width: 100%;
     display: flex; 
     align-items: center;
     position: absolute;
-    top:6;
-    bottom: 1;
+    flex-direction: column;
+    top:0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    background: rgb(27, 27, 27);
+  }
+  span{
+    display: flex; 
+    align-items: center;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgb(27, 27, 27);
   }
   .el-dialog.el-dialog--center{
     background: rgb(27, 27, 27);
   }
+  .controls-img{
+     width:2vw; 
+     filter:invert(100%); 
+     margin: 40px;
+     position: absolute;
+     right: 0;
+  }
   .controls{
-    width: 4em;
+    width: 2vw;
     display: block;
     padding-left: auto;
     margin-left: auto;
