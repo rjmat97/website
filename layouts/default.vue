@@ -9,15 +9,13 @@
       :visible.sync="dialogVisible" :fullscreen="true" :style="`background: blue`"
       width="100%" @visible-change="dialogVisible(false)"
       center>
-      {{$store.state.currentIndex}}<br>
         <div class="main-holder">
           <div class="top" @click="$store.dispatch('dialogVisible',false)">
+
             <img :src="require('@/assets/exit.svg')" 
              class="controls-img">
           </div>
           <span>
-            <!-- <el-row type="flex" align="middle"> -->
-              
               <el-col :span="2">
                 <div @click="$store.dispatch('loadPrev')" style="width: 10vw" v-if="leftActive">
                   <img class="controls left-but" :src="require('@/assets/arrow.svg')">
@@ -42,7 +40,6 @@
                   <img disabled="true" class="controls right-but" :src="require('@/assets/arrow.svg')">
                 </div>
               </el-col>
-            <!-- </el-row> -->
           </span>
         </div>
     </el-dialog>

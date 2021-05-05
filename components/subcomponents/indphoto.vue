@@ -1,8 +1,5 @@
 <template>
-        <!-- <el-col :span="6"> -->
-            <img :src="link" @click="setFull()">
-        <!-- </el-col> -->
-        <!-- <br v-if="state"> -->
+    <img :src="link" @click="setFull()">
 </template>
 
 <script>
