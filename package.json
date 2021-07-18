@@ -16,7 +16,7 @@
     "element-ui": "^2.15.1",
     "glob-parent": "5.1.2",
     "normalize-url": "6.0.1",
-    "nuxt": "^2.15.3",
+    "nuxt": "^2.15.7",
     "vue-cover-gallery": "^1.0.7"
   },
   "devDependencies": {
