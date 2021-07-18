@@ -4,7 +4,6 @@
     <div style="min-height: 70vh; height: 100%">
       <Nuxt />
     </div>    
-
     <el-dialog
       :visible.sync="dialogVisible" :fullscreen="true" :style="`background: blue`"
       width="100%" @visible-change="dialogVisible(false)"

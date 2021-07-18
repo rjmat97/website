@@ -1,6 +1,7 @@
 export const strict = false
+
 export const state = () => ({
-    background: 'white',
+    background: 'black',
     color: 'white',
     urls: [],
     dialogVisible: false,
