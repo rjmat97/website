@@ -36,5 +36,7 @@
     .socials{
         display: block;
         float: middle;
+        /* padding: 2px; */
+        margin: 0px;
     }
 </style>

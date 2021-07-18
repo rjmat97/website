@@ -11,8 +11,9 @@
                     <img class="profile" :src="require('@/assets/profile.jpg')">
                 </div>
                 <div class="deets">
-                    <h1 class="font">rjmat97</h1>
-                    <SocialHandles :size="`30px`"/>
+                    <h1 class="handle">rjmat97</h1>
+                    <SocialHandles :size="`2.8vw`"/>
+                    <h5 class="description">Developer • Photographer • Artist</h5>
                 </div>
             </div>
         </el-col>
@@ -21,8 +22,11 @@
 </template>
 
 <style scoped>
-    .font{
-        font-size: 5vh;
+    .handle{
+        font-size: 3vw;
+    }
+    .description{
+        font-size: 1.5vw;
     }
     .main{
         padding-top: 5em;
@@ -45,6 +49,7 @@
         border-radius: 50%;
     }
     .deets{
-        margin-left: 3vh
+        margin-left: 3vh;
+        /* height: 15vw; */
     }
 </style>
